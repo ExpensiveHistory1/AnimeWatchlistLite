@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30204.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimeWatchlistLite", "AnimeWatchlistLite\AnimeWatchlistLite.csproj", "{A412ABE6-03C8-4D08-AFE5-4E1124875343}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A412ABE6-03C8-4D08-AFE5-4E1124875343}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A412ABE6-03C8-4D08-AFE5-4E1124875343}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A412ABE6-03C8-4D08-AFE5-4E1124875343}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A412ABE6-03C8-4D08-AFE5-4E1124875343}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E467564F-581D-4224-B07D-29CB0D306F27}
+	EndGlobalSection
+EndGlobal

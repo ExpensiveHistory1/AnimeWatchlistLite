@@ -1,0 +1,2 @@
+- Logger einbauen
+- (evtl) Bilder nicht mehr lokal speichern sonder als blob in Datenbank

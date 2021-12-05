@@ -1,0 +1,32 @@
+﻿<Window x:Class="AnimeWatchlistLite.Views.EditWindow"
+        x:Name="Edit_Window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AnimeWatchlistLite.Views"
+        xmlns:converters="clr-namespace:AnimeWatchlistLite.Converters"
+        mc:Ignorable="d"
+        Title="Bearbeitung" Height="380" Width="300" Loaded="Window_Loaded" Icon="results.png">
+    <Window.Resources>
+        <converters:BoolToColorConverter x:Key="BoolToColor"/>
+    </Window.Resources>
+    <Grid Background="{Binding Settings.DarkMode, Converter={StaticResource BoolToColor}}">
+        <StackPanel Margin="20,20,20,10" Loaded="StackPanel_Loaded">
+            <Button Height="140" Width="130" Command="{Binding UploadPic}" Cursor="Hand">
+                <Image Source="{Binding _anime.BildSource}" Height="140" Width="130"></Image>
+            </Button>
+            <Label>Name:</Label>
+            <TextBox Text="{Binding _anime.Titel}"></TextBox>
+            <Label>Status:</Label>
+            <WrapPanel Margin="0,10,0,0">
+                <Button Command="{Binding selStatus}" CommandParameter="Watched" Background="LightGreen" BorderThickness="{Binding WatchedBorder}" BorderBrush="Black" Cursor="Hand">Watched</Button>
+                <Button Command="{Binding selStatus}" CommandParameter="Unwatched" Background="IndianRed" Margin="5,0,0,0" BorderThickness="{Binding UnwatchedBorder}" BorderBrush="Black" Cursor="Hand">Unwatched</Button>
+                <Button Command="{Binding selStatus}" CommandParameter="InProgress" Background="LightBlue" Margin="5,0,0,0" BorderThickness="{Binding InProgressBorder}" BorderBrush="Black" Cursor="Hand">InProgress</Button>
+                <Button Command="{Binding selStatus}" CommandParameter="Waiting" Background="Orange" Margin="5,0,0,0" BorderThickness="{Binding WaitingBorder}" BorderBrush="Black" Cursor="Hand">Waiting</Button>
+            </WrapPanel>
+            <Button Command="{Binding saveChanges}" CommandParameter="{Binding ElementName=Edit_Window}" Margin="0,10,0,0" Cursor="Hand">Speichern</Button>
+            <Button Command="{Binding RemoveAnime}" CommandParameter="{Binding ElementName=Edit_Window}"  Height="20" Background="Red" Foreground="White" Width="250" Margin="0,10,0,0" Cursor="Hand">Entfernen</Button>
+        </StackPanel>
+    </Grid>
+</Window>

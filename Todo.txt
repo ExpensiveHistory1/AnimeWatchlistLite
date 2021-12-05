@@ -1,0 +1,2 @@
+- Mapping von Animeobjekten(Beispiel: Beim EditViewModel-Konstruktor)
+- Speichern von Bilder als Blobdatei in SQLite-Datenbank
